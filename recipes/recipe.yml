@@ -6,7 +6,7 @@ name: kinoite
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -25,6 +25,9 @@ modules:
       packages:
         - micro
         - starship
+        - fastfetch
+        - distrobox
+        
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -43,3 +46,14 @@ modules:
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
+
+  # RPM Fusion Repository for DNF Module
+
+- name: RPM Fusion Free
+  baseurl: https://download1.rpmfusion.org/free/fedora/updates/35/x86_64/
+  enabled: yes
+  gpgcheck: no
+- name: RPM Fusion Non-Free
+  baseurl: https://download1.rpmfusion.org/nonfree/fedora/updates/35/x86_64/
+  enabled: yes
+  gpgcheck: no
