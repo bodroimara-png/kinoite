@@ -47,13 +47,4 @@ modules:
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
-  # RPM Fusion Repository for DNF Module
 
-- name: RPM Fusion Free
-  baseurl: https://download1.rpmfusion.org/free/fedora/updates/35/x86_64/
-  enabled: yes
-  gpgcheck: no
-- name: RPM Fusion Non-Free
-  baseurl: https://download1.rpmfusion.org/nonfree/fedora/updates/35/x86_64/
-  enabled: yes
-  gpgcheck: no
