@@ -47,4 +47,14 @@ modules:
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
+  # Additional repository configuration
+
+# PicoScope repository
+[picoscope-repo]
+name=PicoScope Repository
+baseurl=http://www.picotech.com/software/linux/repo/
+enabled=1
+gpgcheck=1
+gpgkey=http://www.picotech.com/software/linux/repo/RPM-GPG-KEY
+
 
