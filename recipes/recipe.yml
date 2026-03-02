@@ -28,6 +28,7 @@ modules:
         - alacritty
         - fastfetch
         - distrobox
+        - steam
         
     remove:
       packages:
