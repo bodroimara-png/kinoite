@@ -17,6 +17,10 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+- type: script
+    scripts:
+      - picoscope.sh
+
   - type: dnf
     repos:
       copr:
@@ -29,6 +33,7 @@ modules:
         - fastfetch
         - distrobox
         - steam
+        - picoscope
         
     remove:
       packages:
