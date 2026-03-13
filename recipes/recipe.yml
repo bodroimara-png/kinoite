@@ -28,6 +28,8 @@ modules:
         - alacritty
         - fastfetch
         - steam
+        - docker
+        
        
         
     remove:
