@@ -29,6 +29,7 @@ modules:
         - fastfetch
         - steam
         - docker
+        - docker-desktop
         
        
         
